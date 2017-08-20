@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>headroom</title>
+    <link rel="stylesheet/less" href="../less/reset.less">
+    <link rel="stylesheet/less" href="../less/headroom.less">
+    <link rel="stylesheet/less" href="../less/index.less">
+</head>
+<body>
+
+    <p></p>
+    <p></p>
+    <p></p>
+<header id="headerSlide" class="header header--fixed hide-from-print" role="banner">
+   <h3>animated slide</h3>
+</header>
+<header id="headerSwing" class="header header--fixed hide-from-print" role="banner">
+    <h3>animated swing</h3>
+</header>
+<header id="headerFlip" class="header header--fixed hide-from-print" role="banner">
+    <h3>animated flip</h3>
+</header>
+<header id="headerBounce" class="header header--fixed hide-from-print" role="banner">
+    <h3>animated bounce</h3>
+</header>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+</html>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/less.2.7.2.min.js"></script>
+<script src="../js/jquery-headroom.js"></script>
+<script>
+    $(function(){
+        $("#headerSlide").headroom({
+            "offset": 50,
+            "tolerance": 5,
+            "classes": {
+                "initial": "animated",
+                "pinned": "slideDown",
+                "unpinned": "slideUp"
+            }
+        });
+        $("#headerSwing").headroom({
+            "offset": 100,
+            "tolerance": 5,
+            "classes": {
+                "initial": "animated",
+                "pinned": "swingInX",
+                "unpinned": "swingOutX"
+            }
+        });
+        $("#headerFlip").headroom({
+            "offset": 150,
+            "tolerance": 5,
+            "classes": {
+                "initial": "animated",
+                "pinned": "flipInX",
+                "unpinned": "flipOutX"
+            }
+        });
+        $("#headerBounce").headroom({
+            "offset": 200,
+            "tolerance": 5,
+            "classes": {
+                "initial": "animated",
+                "pinned": "bounceInDown",
+                "unpinned": "bounceOutUp"
+            }
+        });
+
+    });
+
+
+
+</script>
